@@ -1,6 +1,7 @@
 def app(environ, start_response):
     """Simplest possible application object"""
     data = environ['QUERY_STRING'].split('&')
+    data = [item+'\r\n' for item in data]
     data = [item.encode() for item in data]
     status = '200 OK'
     response_headers = [
