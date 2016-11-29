@@ -19,11 +19,11 @@ from qa.views import test, not_found
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', not_found, name='main'),
-    url(r'^login/$', not_found, name = 'login'),
-    url(r'^signup/$', not_found, name = 'signup'),
+    url(r'^$', testtest, name='main'),
+    url(r'^login/$', test, name = 'login'),
+    url(r'^signup/$', test, name = 'signup'),
     url(r'^question/(\d+)/$', test, name = 'question'),
-    url(r'^ask/$', not_found, name = 'ask'),
-    url(r'^popular/$', not_found, name = 'popular'),
-    url(r'^new/$', not_found, name = 'new')
+    url(r'^ask/$', test, name = 'ask'),
+    url(r'^popular/$', test, name = 'popular'),
+    url(r'^new/$', test, name = 'new')
 ]
